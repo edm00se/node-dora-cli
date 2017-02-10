@@ -4,15 +4,21 @@ A CLI tool for the [node-dora](https://github.com/edm00se/node-dora) package.
 
 ## Installation
 
-- `npm install --global dora-cli`
+- `npm install --save-dev dora-cli`
 
-You can also save it as a project dependency, with `--save` or `--save-dev`.
+You can also save it as a direct dependency with `--save` or for system wide access, with `--global`.
 
 ## Usage
 
-Assuming you have an On Disk Project at a relative path of "My Amazing ODP", you can use the cli for dora via `dora 'My Amazing ODP'`.
+Assuming you have an On Disk Project at a relative path of "My Amazing ODP", you can set up an [npm script](https://docs.npmjs.com/misc/scripts) in your `package.json` to pont to it, like such:
 
-If you wish to have the original DORA installed along side of this on your machine, don't install this globally, install it in project dependencies and call it via an npm script.
+```json
+"scripts": {
+  "clean": "dora 'My Amazing ODP'"
+}
+```
+
+Now any time it available to other npm scripts or via `npm run clean`.
 
 ## Contributing
 
