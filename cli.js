@@ -16,10 +16,4 @@ const cli = meow(`
     }
 });
 
-const spinner = ora('⚡️ Processing with DORA XSLT').start();
-dora.performFilter(cli.input[0], function(err){
-  if(err){
-    spinner.fail('🦄 😢!');
-  }
-  spinner.succeed('🦄 😊');
-});
+ora.promise(dora.performFilter(cli.input[0]), '⚡️️ Processing with DORA XSLT');
