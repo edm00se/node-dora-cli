@@ -4,6 +4,10 @@
 const dora = require('node-dora');
 const meow = require('meow');
 const ora = require('ora');
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+
+updateNotifier({pkg}).notify();
 
 const cli = meow(`
   Usage
@@ -12,8 +16,20 @@ const cli = meow(`
     $ dora 'My ODP'
 `, {
     alias: {
-        h: 'help'
+        h: 'help',
+        v: 'version'
     }
 });
 
-ora.promise(dora.performFilter(cli.input[0]), '⚡️️ Processing with DORA XSLT');
+function bringTheMagic(odpPath) {
+  const spinner = ora('⚡️ Processing with DORA XSLT').start();
+  dora.performFilter(odpPath, function(err){
+    if(err){
+      spinner.fail('🦄 😢!');
+    }
+    spinner.succeed('🦄 😊');
+  });
+}
+
+const odpPath = cli.input[0];
+
