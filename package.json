@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edm00se/node-dora.git"
+    "url": "git+https://github.com/edm00se/node-dora-cli.git"
   },
   "keywords": [
     "node",
@@ -37,7 +37,7 @@
   "homepage": "https://github.com/edm00se/node-dora-cli#readme",
   "dependencies": {
     "meow": "3.7.0",
-    "node-dora": "1.0.0-1",
+    "node-dora": "1.0.0",
     "ora": "1.1.0",
     "update-notifier": "2.0.0"
   },
