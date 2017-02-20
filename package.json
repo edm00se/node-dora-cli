@@ -1,6 +1,6 @@
 {
   "name": "dora-cli",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "a cli tool for node-dora",
   "scripts": {
     "test": "ava",
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/edm00se/node-dora-cli#readme",
   "dependencies": {
+    "chalk": "1.1.3",
     "meow": "3.7.0",
     "node-dora": "1.0.0",
     "ora": "1.1.0",

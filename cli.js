@@ -6,6 +6,7 @@ const meow = require('meow');
 const ora = require('ora');
 const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
+const chalk = require('chalk');
 
 updateNotifier({pkg}).notify();
 
@@ -32,4 +33,8 @@ function bringTheMagic(odpPath) {
 }
 
 const odpPath = cli.input[0];
-
+if( "" !== odpPath.trim() ){
+  bringTheMagic(odpPath);
+} else {
+  chalk.red.bold('A valid ODP path must be specified!');
+}
