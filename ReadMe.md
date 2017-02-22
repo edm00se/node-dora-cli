@@ -1,5 +1,7 @@
 # node-dora-cli
 
+[![NPM version][npm-image]][npm-url]
+
 A CLI tool for the [node-dora](https://github.com/edm00se/node-dora) package.
 
 ## Installation
@@ -35,3 +37,6 @@ Now any time it available to other npm scripts or via `npm run clean`.
 ## License
 
 MIT
+
+[npm-image]: https://badge.fury.io/js/dora-cli.svg
+[npm-url]: https://npmjs.org/package/dora-cli
