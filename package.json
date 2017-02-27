@@ -26,6 +26,9 @@
   "bin": {
     "dora": "cli.js"
   },
+  "files": [
+    "cli.js"
+  ],
   "engines": {
     "node": ">=6.9",
     "npm": ">=3"
