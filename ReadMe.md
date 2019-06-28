@@ -4,6 +4,10 @@
 
 A CLI tool for the [node-dora](https://github.com/edm00se/node-dora) package.
 
+## Update
+
+This repo has been archived. If you believe this shouldn't be the case, please [contact the project author](https://edm00.se/contact).
+
 ## Installation
 
 - `npm install --save-dev dora-cli`
